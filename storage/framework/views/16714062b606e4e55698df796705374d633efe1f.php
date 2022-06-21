@@ -17,23 +17,13 @@
                 <div class="row">
                     <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                         <div class="card card-light-blue">
-                        <?php if(Auth::guard('admin')->user()->type=="admin"): ?>
-                            <div class="card-body">
-                                <h4 class="mb-4">All Users</h4>
-                                <div><a href="<?php echo e(url('/admin/admins')); ?>"><b><i><small class="text-danger">View All</small></i></b></a></div>
-                            </div>
-                        <?php elseif(Auth::guard('admin')->user()->type=="paid_user"): ?>
+                    
                             <div class="card-body">
                                 <h4 class="mb-4">Paid User</h4>
-                                <p class="mb-4">Yes, I am a Paid User</p>
+                                <p class="mb-4">I am no longer a Free User but a verified paid user</p>
+                                
                             </div>
-                        <?php else: ?>
-                            <div class="card-body">
-                                <h4 class="mb-4">Free User</h4>
-                                <p class="mb-4">I am a Free User and would love to upgrade</p>
-                                <div><a href="<?php echo e(url('/admin/paystack/payment')); ?>"><button class="btn btn-success">UPGRADE</button></a></div>
-                            </div>
-                        <?php endif; ?>
+                      
                         </div>
                     </div>
                 </div>
@@ -46,4 +36,4 @@
     <!-- partial -->
 </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('admin.layout.layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\canadian_wealth_app\resources\views/admin/dashboard.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('admin.layout.layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\canadian_wealth_app\resources\views/admin/paystack/confirmed.blade.php ENDPATH**/ ?>

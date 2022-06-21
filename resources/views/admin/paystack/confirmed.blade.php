@@ -17,23 +17,13 @@
                 <div class="row">
                     <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                         <div class="card card-light-blue">
-                        @if(Auth::guard('admin')->user()->type=="admin")
-                            <div class="card-body">
-                                <h4 class="mb-4">All Users</h4>
-                                <div><a href="{{ url('/admin/admins')}}"><b><i><small class="text-danger">View All</small></i></b></a></div>
-                            </div>
-                        @elseif(Auth::guard('admin')->user()->type=="paid_user")
+                    
                             <div class="card-body">
                                 <h4 class="mb-4">Paid User</h4>
-                                <p class="mb-4">Yes, I am a Paid User</p>
+                                <p class="mb-4">I am no longer a Free User but a verified paid user</p>
+                                
                             </div>
-                        @else
-                            <div class="card-body">
-                                <h4 class="mb-4">Free User</h4>
-                                <p class="mb-4">I am a Free User and would love to upgrade</p>
-                                <div><a href="{{ url('/admin/paystack/payment')}}"><button class="btn btn-success">UPGRADE</button></a></div>
-                            </div>
-                        @endif
+                      
                         </div>
                     </div>
                 </div>

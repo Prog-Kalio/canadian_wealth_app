@@ -113,7 +113,7 @@
             </a>
             <div class="collapse" id="form-elements">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a class="nav-link" href="<?php echo e(url('admin/pay_now')); ?>">Pay Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo e(url('/admin/paystack/payment')); ?>">Pay Now</a></li>
                 </ul>
             </div>
         </li>

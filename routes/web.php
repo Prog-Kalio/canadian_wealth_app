@@ -63,6 +63,15 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
         //Delete Admin
         Route::get('delete-admin/{id}', 'AdminController@deleteAdmin');
 
+        //Paystack Payment Route
+        Route::get('paystack/payment', 'PaymentController@payNow');
+
+        //Verify Paystack Payment Route
+        Route::get('paystack/verify-payment/{reference}', 'PaymentController@verify');
+
+        //Confirmed User payment Route
+        Route::get('paystack/confirmed', 'PaymentController@confirmed');
+
     });
 
 });

@@ -23,7 +23,7 @@
         <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item nav-profile dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                <img src="<?php echo e(url('admin/images/photos/'.Auth::guard('admin')->user()->image)); ?>" alt="profile"/>
+                <img src="<?php echo e(url('admin/images/logo.svg')); ?>"  alt="profile"/>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                     <a class="dropdown-item" href="<?php echo e(url('admin/update-admin-details')); ?>">

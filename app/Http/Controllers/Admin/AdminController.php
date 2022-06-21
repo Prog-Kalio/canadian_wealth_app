@@ -18,24 +18,10 @@ class AdminController extends Controller
 
 
     //Register Admin Details
-    public function registerAdmin(Request $request, $id=null) {
-        if($id=="") {
-            //Add New Admin
-            $title = "Add Admin";
-            $admin = new Admin;
-            $getAdmins = array();
-            $message = "Admin added successfully";
-        }
-        else{
-            //Find and edit existing category
-            $title = "Update Admin";
-            $admin = Admin::find($id);
-            $getAdmins = Admin::where(['id'=>$admin['id']])->get();
-            $message = "Admin updated successfully";
-        }
+    public function registerAdmin(Request $request) {
         if($request->isMethod('post')) {
             $data = $request->all();
-            //  echo "<pre>"; print_r($data); die();
+
             $rules = [
                 'admin_name' => 'required',
                 'admin_mobile' => 'required|numeric',
@@ -73,23 +59,22 @@ class AdminController extends Controller
             else {
                 $imageName = "";
             }
-
+            
             // Insert details into database
-            $admin->name = $data['admin_name'];
-            $admin->type = $data['type'];
-            $admin->email = $data['email']; 
-            $admin->mobile = $data['admin_mobile'];
-            $admin->password = $data['password'];
-            $admin->image = $imageName;
-            $admin->status = 1;
-            // dd($admin);
-            $admin->save();
-            return redirect('admin/dashboard')->with('success_message', $message);
+            $admin = Admin::create([
+            'name' => $data['admin_name'],
+            'type' => $data['type'],
+            'email' => $data['email'], 
+            'mobile' => $data['admin_mobile'],
+            'password' => Hash::make($request->password),
+            'image' => $imageName,
+            'status' => 1,
+            ]);
+
+            return redirect('admin/dashboard');
+            
         }
-        else{
-            return redirect()->back()->with('error_message','Details failed to save');
-        }
-        return view('admin.register')->with(compact('title','admin','getAdmins'));
+        return view('admin.register');
     }
 
 
