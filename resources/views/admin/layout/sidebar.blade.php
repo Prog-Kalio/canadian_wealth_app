@@ -43,7 +43,7 @@
             </a>
             <div class="collapse" id="form-elements">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"><a class="nav-link" href="{{ url('admin/view_payment') }}">View Payment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('admin/paystack/view-payment') }}">View Payment</a></li>
                 </ul>
             </div>
         </li>

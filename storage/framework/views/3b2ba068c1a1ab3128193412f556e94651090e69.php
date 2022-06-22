@@ -75,7 +75,7 @@
                                               <a href="javascript:void(0)" class="confirmDelete" module="admin" moduleid="<?php echo e($admin['id']); ?>"><i style="font-size:25px; color: #e0240a;" class="mdi mdi-file-excel-box"></i></a>
                                         </td>
                                     </tr>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>;
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </tbody>
                             </table>
                         </div>

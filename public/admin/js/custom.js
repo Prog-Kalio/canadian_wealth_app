@@ -4,7 +4,8 @@ $(document).ready(function(){
     $('.fa-lock').type('text');
     
     // Call data Tables function
-    $('#admins').DataTable();
+    $("#admins").DataTable();
+    $("#payments").DataTable();
 
     // Removing the Active class on Nav-item in sidebar
     $(".nav-item").removeClass("active");
@@ -103,6 +104,6 @@ $(document).ready(function(){
             }
           })
     });
-
+    
 
 });

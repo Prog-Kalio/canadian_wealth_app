@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Admin;
 use App\Models\Payment;
 use Auth;
 
@@ -16,7 +17,7 @@ class PaymentController extends Controller
 
     //Verify records for payment methods
     public function verify($reference) {
-        $secret_key = 'sk_test_41ddda68f58ab45a82c66e074bb309db9f438b47';
+        $secret_key = 'sk_test_e5247a3d48a8ceaa0940d847fc47c3458aec92ca';
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => "https://api.paystack.co/transaction/verify/$reference",
@@ -49,9 +50,18 @@ class PaymentController extends Controller
         // }
     
         return $output;
+
     }
 
     public function confirmed() {
         return view('admin/paystack/confirmed');
     }
+
+    public function view() {
+        
+        $payments = Payment::get()->toArray();
+        // dd($payment);
+        return view('admin.paystack.view-payment')->with(compact('payments'));
+    }
+
 }

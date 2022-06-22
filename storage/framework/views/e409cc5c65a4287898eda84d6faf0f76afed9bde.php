@@ -92,10 +92,8 @@
         <script src="<?php echo e(url('admin/js/dataTables.bootstrap4.min.js')); ?>"></script>
         <!-- End Data Table js -->
         <!-- script for sweetalert2-->
-        <script src="<?php echo e(url('//cdn.jsdelivr.net/npm/sweetalert2@11')); ?>"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!-- End script for sweetalert2 -->
-        <!-- script for Ajax -->
-        <script src="<?php echo e(url('https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js')); ?>"></script>
-        <!-- End script for Ajax -->
+        
     </body>
 </html><?php /**PATH C:\xampp\htdocs\canadian_wealth_app\resources\views/admin/layout/layout.blade.php ENDPATH**/ ?>

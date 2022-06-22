@@ -31,7 +31,7 @@ require __DIR__.'/auth.php';
 Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function(){
     //Admin Login router with Admin groups
     Route::match(['get', 'post'], 'login', 'AdminController@login');
-
+    
     //Register Admin Details
     Route::match(['get','post'], 'register', 'AdminController@registerAdmin');
 
@@ -71,6 +71,9 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
 
         //Confirmed User payment Route
         Route::get('paystack/confirmed', 'PaymentController@confirmed');
+
+        //View Paystack Payment Route
+        Route::match(['get','post'], 'paystack/view-payment', 'PaymentController@view');
 
     });
 

@@ -70,7 +70,7 @@
                                               <a href="javascript:void(0)" class="confirmDelete" module="admin" moduleid="{{ $admin['id'] }}"><i style="font-size:25px; color: #e0240a;" class="mdi mdi-file-excel-box"></i></a>
                                         </td>
                                     </tr>
-                                    @endforeach;
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>

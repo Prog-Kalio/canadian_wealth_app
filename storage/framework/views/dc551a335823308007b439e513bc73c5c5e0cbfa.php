@@ -24,46 +24,27 @@
         <!-- Data Table CSS -->
         <link rel="stylesheet" href="<?php echo e(url('admin/css/bootstrap.css')); ?>">
         <link rel="stylesheet" href="<?php echo e(url('admin/css/dataTables.bootstrap4.min.css')); ?>">
+        <!-- CSS only -->
+        <link href="<?php echo e(url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css')); ?>" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="<?php echo e(url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css')); ?>">
         <!-- End Data Table CSS -->
     </head>
     <body>
         <div class="container-scroller">
             <!-- partial:partials/_navbar.html -->
-            <?php echo $__env->make('front.frontlayout.front_header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-            <!-- partial -->
-            <div class="container-fluid page-body-wrapper">
-                <!-- partial:partials/_settings-panel.html -->
-                <div class="theme-setting-wrapper">
-                    <div id="settings-trigger"><i class="ti-settings"></i></div>
-                    <div id="theme-settings" class="settings-panel">
-                        <i class="settings-close ti-close"></i>
-                        <p class="settings-heading">SIDEBAR SKINS</p>
-                        <div class="sidebar-bg-options selected" id="sidebar-light-theme">
-                            <div class="img-ss rounded-circle bg-light border mr-3"></div>
-                            Light
-                        </div>
-                        <div class="sidebar-bg-options" id="sidebar-dark-theme">
-                            <div class="img-ss rounded-circle bg-dark border mr-3"></div>
-                            Dark
-                        </div>
-                        <p class="settings-heading mt-2">HEADER SKINS</p>
-                        <div class="color-tiles mx-0 px-4">
-                            <div class="tiles dark"></div>
-                            <div class="tiles default"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- partial -->
-
-                <!-- partial -->
+            <?php echo $__env->make('front.frontlayout.fronthead', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+         
                 <?php echo $__env->yieldContent('content'); ?>
                 <!-- main-panel ends -->
-            </div>
+           
             <!-- page-body-wrapper ends -->
             <?php echo $__env->make('front.frontlayout.front_footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         </div>
         <!-- container-scroller -->
         <!-- plugins:js -->
+        <!-- JavaScript Bundle with Popper -->
+        <script src="<?php echo e(url('https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js')); ?>" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
         <script src="<?php echo e(url('admin/vendors/js/vendor.bundle.base.js')); ?>"></script>
         <!-- endinject -->
         <!-- Plugin js for this page -->
@@ -94,5 +75,6 @@
         <!-- script for sweetalert2-->
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!-- End script for sweetalert2 -->
+        
     </body>
 </html><?php /**PATH C:\xampp\htdocs\canadian_wealth_app\resources\views/front/frontlayout/front_layout.blade.php ENDPATH**/ ?>

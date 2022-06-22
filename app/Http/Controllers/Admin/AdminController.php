@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
 use App\Models\Admin;
 use Auth;
 use Hash;
@@ -71,8 +72,12 @@ class AdminController extends Controller
             'status' => 1,
             ]);
 
-            return redirect('admin/dashboard');
-            
+            // dd($admin);
+            event(new Registered($admin));
+
+            Auth::login($admin);
+
+            return redirect()->intended('admin/dashboard');
         }
         return view('admin.register');
     }

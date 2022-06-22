@@ -27,7 +27,7 @@
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo" style="text-align:center">
-                <img src="<?php echo e(url('admin/images/logo.svg')); ?>" alt="logo">
+                <a href="<?php echo e(url('/')); ?>"><img src="<?php echo e(url('admin/images/logo.svg')); ?>" alt="logo"></a>
               </div>
               <h4 style="text-align:center">Canadian Wealth Test</h4><br>
               <h6 class="font-weight-light">Sign in to continue. <span style="color:red">(ADMINS Only!)</span></h6>
